@@ -1,6 +1,6 @@
 {
   "name": "gulp-gitmodified-renamed",
-  "version": "1.1.1.1",
+  "version": "1.1.1",
   "description": "A plugin for Gulp to get an object stream of modified files on git. + fix for renamed ones",
   "keywords": [
     "gulpplugin",
