@@ -45,6 +45,9 @@ module.exports = function (modes) {
     var checkStatus = function () {
       var isIn = !!find(files, function (fileLine) {
         var line = path.normalize(fileLine.path);
+        if (line.indexOf(' -> ') > -1) {  // fix for R files
+          line = line.match(/-> (\S+)/)[1];
+        }
         if (line.substring(line.length, line.length - 1)) {
           return file.path.indexOf(line.substring(0, line.length - 1)) !== -1;
         }
